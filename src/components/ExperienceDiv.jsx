@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function ExperienceDiv({ companyName, positionTitle, jobResponsibility, dateStarted, dateEnded }) {
+function ExperienceDiv({companyName, positionTitle, jobResponsibility, dateStarted, dateEnded}) {
     return (
         <div>
             <div>{companyName}</div>

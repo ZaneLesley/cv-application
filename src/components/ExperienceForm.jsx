@@ -12,9 +12,6 @@ function ExperienceForm({setExperience}) {
     });
 
     const onSubmit = (data) => {
-        alert(`Company Name: ${data.companyName}, position title: ${data.positionTitle}, job responsibilites: ${data.jobResponsibility}
-        dateRange: ${data.dateStarted} - ${data.dateEnded}`);
-
         setExperience(data);
     };
 

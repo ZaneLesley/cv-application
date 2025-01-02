@@ -10,8 +10,6 @@ function EducationForm({setEducation}) {
     });
 
     const onSubmit = (data) => {
-        alert(`School Name: ${data.schoolName}, title of study: ${data.titleOfStudy}, date of study: ${data.dateOfStudy}`);
-
         setEducation(data)
     };
 

@@ -1,7 +1,8 @@
 import Input from "./Input";
 import useForm from "../hooks/useForm.jsx";
+import PropTypes from "prop-types";
 
-function PersonalForm() {
+function PersonalForm({setPersonal}) {
     const {inputs, handleChange, handleSubmit} = useForm({
         name: "",
         email: "",
@@ -9,7 +10,7 @@ function PersonalForm() {
     });
 
     const onSubmit = (data) => {
-        alert(`Name: ${data.name}, Email: ${data.email}, Phone: ${data.phoneNumber}`);
+        setPersonal(data)
     };
 
     return (
@@ -29,6 +30,10 @@ function PersonalForm() {
             <input type="submit"/>
         </form>
     );
+}
+
+PersonalForm.propTypes = {
+    setPersonal: PropTypes.func.isRequired,
 }
 
 export default PersonalForm;

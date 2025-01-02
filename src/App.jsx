@@ -5,17 +5,22 @@ import PersonalForm from './components/PersonalForm.jsx'
 import EducationForm from './components/EducationForm.jsx'
 import ExperienceForm from "./components/ExperienceForm.jsx";
 import ExperienceDiv from "./components/ExperienceDiv.jsx";
+import EducationDiv from "./components/EducationDiv.jsx";
+import PersonalDiv from "./components/PersonalDiv.jsx";
 
 function App() {
     const [experience, setExperience] = useState(null);
-
+    const [education, setEducation] = useState(null);
+    const [personal, setPersonal] = useState(null);
     return (
         <>
             <Header/>
-            <PersonalForm/>
-            <EducationForm/>
+            <PersonalForm setPersonal={setPersonal}/>
+            <EducationForm setEducation={setEducation} />
             <ExperienceForm setExperience={setExperience} />
             {experience && <ExperienceDiv {...experience} />}
+            {education && <EducationDiv{...education} />}
+            {personal && <PersonalDiv{...personal}/>}
         </>
     )
 }
