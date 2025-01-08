@@ -25,21 +25,17 @@ function PersonalForm() {
 
 
 function useForm(initialValues) {
-    const [inputs, setInputs] = useState({initialValues: initialValues});
+    const [inputs, setInputs] = useState({initialValues});
 
     const handleChange = (e) => {
-        /*
-        this is the same as
-        const name = e.target.name;
-        const value = e.target.value;
-         */
-        const {name, value} = e.target;
-        setInputs({...inputs, [name]: value});
+        const { name, value } = e.target;
+        setInputs((prev) => ({ ...prev, [name]: value }));
     };
 
     const handleSubmit = (callback) => (e) => {
         e.preventDefault(); // Prevent the default form submission behavior (e.g., page reload)
         callback(inputs); // Call the provided callback with the current form data (inputs)
+        setInputs(initialValues);
     };
 
     return {inputs, handleChange, handleSubmit};
