@@ -14,7 +14,7 @@ function EducationForm({setEducation}) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <label>{"Enter your school's name:"}
                 <Input type='text'
                        name="schoolName"

@@ -16,7 +16,7 @@ function ExperienceForm({setExperience}) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <label>{"Enter your company's name:"}
                 <Input type='text'
                        name="companyName"

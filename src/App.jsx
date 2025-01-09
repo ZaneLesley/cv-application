@@ -15,13 +15,21 @@ function App() {
     return (
         <>
             <Header/>
-            <PersonalForm setPersonal={setPersonal}/>
-            <EducationForm setEducation={setEducation} />
-            <ExperienceForm setExperience={setExperience} />
-            {experience && <ExperienceDiv {...experience} />}
-            {education && <EducationDiv{...education} />}
-            {personal && <PersonalDiv{...personal}/>}
+            <div className="article">
+                <div className="forms">
+                    <PersonalForm setPersonal={setPersonal}/>
+                    <EducationForm setEducation={setEducation}/>
+                    <ExperienceForm setExperience={setExperience}/>
+                </div>
+                <div className="container">
+                    <PersonalDiv{...personal}/>
+                    <ExperienceDiv {...experience} />
+                    <EducationDiv{...education} />
+                </div>
+            </div>
+            <div className="footer">Zane Lesley * University of Oklahoma</div>
         </>
+
     )
 }
 

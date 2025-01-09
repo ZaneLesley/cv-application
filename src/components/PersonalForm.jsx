@@ -14,7 +14,7 @@ function PersonalForm({setPersonal}) {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)}>
             <label>
                 Enter your name:
                 <Input type="text" name="name" value={inputs.name} onChange={handleChange}/>

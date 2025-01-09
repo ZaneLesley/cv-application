@@ -28,8 +28,8 @@ function useForm(initialValues) {
     const [inputs, setInputs] = useState({initialValues});
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setInputs((prev) => ({ ...prev, [name]: value }));
+        const {name, value} = e.target;
+        setInputs((prev) => ({...prev, [name]: value}));
     };
 
     const handleSubmit = (callback) => (e) => {
