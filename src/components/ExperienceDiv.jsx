@@ -6,7 +6,7 @@ function ExperienceDiv({companyName, positionTitle, jobResponsibility, dateStart
             <div>{companyName}</div>
             <div>{positionTitle}</div>
             <div>{jobResponsibility}</div>
-            <div>{`${dateStarted} - ${dateEnded}`}</div>
+            <div>{dateStarted && dateEnded ? `${dateStarted} - ${dateEnded}` : ''}</div>
         </div>
     );
 }

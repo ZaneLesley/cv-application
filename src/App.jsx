@@ -23,8 +23,8 @@ function App() {
                 </div>
                 <div className="container">
                     <PersonalDiv{...personal}/>
-                    <ExperienceDiv {...experience} />
                     <EducationDiv{...education} />
+                    <ExperienceDiv {...experience} />
                 </div>
             </div>
             <div className="footer">Zane Lesley * University of Oklahoma</div>
