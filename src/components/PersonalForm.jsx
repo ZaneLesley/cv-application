@@ -7,6 +7,7 @@ function PersonalForm({setPersonal, style}) {
         name: "",
         email: "",
         phoneNumber: "",
+        github: "",
     });
 
     const onSubmit = (data) => {
@@ -26,6 +27,10 @@ function PersonalForm({setPersonal, style}) {
             <label>
                 Enter your phone number:
                 <Input type="tel" name="phoneNumber" value={inputs.phoneNumber} onChange={handleChange}/>
+            </label>
+            <label>
+                Enter your github link:
+                <Input type="url" name="github" value={inputs.github} onChange={handleChange}/>
             </label>
             <input type="submit"/>
         </form>
