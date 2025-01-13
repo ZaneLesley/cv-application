@@ -2,7 +2,7 @@ import Input from "./Input";
 import useForm from "../hooks/useForm";
 import PropTypes from "prop-types";
 
-function ExperienceForm({setExperience}) {
+function ExperienceForm({setExperience, style}) {
     const {inputs, handleChange, handleSubmit} = useForm({
         companyName: "",
         positionTitle: "",
@@ -16,7 +16,7 @@ function ExperienceForm({setExperience}) {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)} style={style}>
             <label>{"Enter your company's name:"}
                 <Input type='text'
                        name="companyName"
@@ -59,6 +59,7 @@ function ExperienceForm({setExperience}) {
 
 ExperienceForm.propTypes = {
     setExperience: PropTypes.func.isRequired,
+    style: PropTypes.object.isRequired,
 }
 
 export default ExperienceForm

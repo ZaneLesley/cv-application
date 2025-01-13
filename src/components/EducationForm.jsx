@@ -2,7 +2,7 @@ import Input from "./Input";
 import useForm from "../hooks/useForm";
 import PropTypes from "prop-types";
 
-function EducationForm({setEducation}) {
+function EducationForm({setEducation, style}) {
     const {inputs, handleChange, handleSubmit} = useForm({
         schoolName: "",
         titleOfStudy: "",
@@ -14,7 +14,7 @@ function EducationForm({setEducation}) {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)} style={style}>
             <label>{"Enter your school's name:"}
                 <Input type='text'
                        name="schoolName"
@@ -43,6 +43,7 @@ function EducationForm({setEducation}) {
 
 EducationForm.propTypes = {
     setEducation: PropTypes.func.isRequired,
+    style: PropTypes.object.isRequired,
 }
 
 export default EducationForm

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function EducationDiv({schoolName, titleOfStudy, dateOfStudy}) {
     return (
         <>
-            <div>
+            <div className="education">
                 <div>{schoolName}</div>
                 <div>{titleOfStudy}</div>
                 <div>{dateOfStudy}</div>

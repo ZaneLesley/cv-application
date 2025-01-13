@@ -29,10 +29,14 @@ html {
     justify-content: space-around;
 }
 
-.container {
+.paper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: black;
+
+    background-color: white;
+    aspect-ratio: 8 / 11.5; /* size of a piece of paper */
 }
 
 

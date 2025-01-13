@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function ExperienceDiv({companyName, positionTitle, jobResponsibility, dateStarted, dateEnded}) {
     return (
-        <div>
+        <div className="experience">
             <div>{companyName}</div>
             <div>{positionTitle}</div>
             <div>{jobResponsibility}</div>

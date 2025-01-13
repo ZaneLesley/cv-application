@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function PersonalDiv({name, email, phoneNumber}) {
     return (
-        <div>
+        <div className="personal">
             <div>{name}</div>
             <div>{email}</div>
             <div>{phoneNumber}</div>

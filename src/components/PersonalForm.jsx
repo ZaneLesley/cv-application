@@ -2,7 +2,7 @@ import Input from "./Input";
 import useForm from "../hooks/useForm.jsx";
 import PropTypes from "prop-types";
 
-function PersonalForm({setPersonal}) {
+function PersonalForm({setPersonal, style}) {
     const {inputs, handleChange, handleSubmit} = useForm({
         name: "",
         email: "",
@@ -14,7 +14,7 @@ function PersonalForm({setPersonal}) {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)} style={style}>
             <label>
                 Enter your name:
                 <Input type="text" name="name" value={inputs.name} onChange={handleChange}/>
@@ -34,6 +34,7 @@ function PersonalForm({setPersonal}) {
 
 PersonalForm.propTypes = {
     setPersonal: PropTypes.func.isRequired,
+    style: PropTypes.object.isRequired,
 }
 
 export default PersonalForm;
