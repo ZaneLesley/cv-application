@@ -1,6 +1,5 @@
 import './App.css'
 import Header from './components/Header.jsx'
-import PersonalButton from "./components/PersonalButton.jsx";
 import MainForm from "./components/MainForm.jsx";
 
 function App() {

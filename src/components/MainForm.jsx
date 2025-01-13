@@ -16,18 +16,20 @@ function MainForm() {
     const [activeSection, setActiveSection] = useState("education");
     return (
         <div className="article">
-            <div className="navigation">
-                <PersonalButton onClick={() => setActiveSection("personal")} text="Personal" />
-                <PersonalButton onClick={() => setActiveSection("education")} text="Education" />
-                <PersonalButton onClick={() => setActiveSection("experience")} text="Experience"/>
-            </div>
-            <div className="forms">
-                <PersonalForm setPersonal={setPersonal}
-                              style={{display: activeSection === "personal" ? "flex" : "none"}}/>
-                <EducationForm setEducation={setEducation}
-                               style={{display: activeSection === "education" ? "flex" : "none"}}/>
-                <ExperienceForm setExperience={setExperience}
-                                style={{display: activeSection === "experience" ? "flex" : "none"}}/>
+            <div className="container">
+                <div className="navigation">
+                    <PersonalButton onClick={() => setActiveSection("personal")} text="Personal"/>
+                    <PersonalButton onClick={() => setActiveSection("education")} text="Education"/>
+                    <PersonalButton onClick={() => setActiveSection("experience")} text="Experience"/>
+                </div>
+                <div className="forms">
+                    <PersonalForm setPersonal={setPersonal}
+                                  style={{display: activeSection === "personal" ? "flex" : "none"}}/>
+                    <EducationForm setEducation={setEducation}
+                                   style={{display: activeSection === "education" ? "flex" : "none"}}/>
+                    <ExperienceForm setExperience={setExperience}
+                                    style={{display: activeSection === "experience" ? "flex" : "none"}}/>
+                </div>
             </div>
             <Paper>
                 <PersonalDiv{...personal}/>

@@ -26,21 +26,41 @@ html {
 
 .article {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-grow: .5;
+    gap: 5rem;
 }
 
 .paper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: black;
 
     background-color: white;
     aspect-ratio: 8 / 11.5; /* size of a piece of paper */
+    height: 100%;
+    width: 25%;
+}
+
+.article .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    height: 100%;
+    width: 40%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 
-.forms {
+.forms .navigation {
     display: flex;
     flex-direction: column;
     justify-content: center;
