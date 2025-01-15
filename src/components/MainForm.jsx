@@ -9,11 +9,15 @@ import ExperienceDiv from "./ExperienceDiv.jsx";
 import PersonalButton from "./PersonalButton.jsx";
 
 function MainForm() {
-    const [experience, setExperience] = useState(null);
+    const [experiences, setExperiences] = useState([]);
     const [education, setEducation] = useState(null);
     const [personal, setPersonal] = useState(null);
 
     const [activeSection, setActiveSection] = useState("education");
+
+    const addExperience = (data) => {
+        setExperiences((prev) => [...prev, {id: Date.now(), ...data}]);
+    }
     return (
         <div className="article">
             <div className="container">
@@ -27,14 +31,17 @@ function MainForm() {
                                   style={{display: activeSection === "personal" ? "flex" : "none"}}/>
                     <EducationForm setEducation={setEducation}
                                    style={{display: activeSection === "education" ? "flex" : "none"}}/>
-                    <ExperienceForm setExperience={setExperience}
+                    <ExperienceForm setExperience={addExperience}
                                     style={{display: activeSection === "experience" ? "flex" : "none"}}/>
                 </div>
             </div>
             <Paper>
                 <PersonalDiv{...personal}/>
                 <EducationDiv{...education} />
-                <ExperienceDiv {...experience} />
+                {/* dynamic adding of experience */}
+                {experiences.map(experience => (
+                    <ExperienceDiv key={experience.id} id={experience.id} {...experience} />
+                ))}
             </Paper>
         </div>
     )

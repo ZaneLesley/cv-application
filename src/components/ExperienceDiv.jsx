@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
-function ExperienceDiv({companyName, positionTitle, jobResponsibility, dateStarted, dateEnded}) {
+function ExperienceDiv({id, companyName, positionTitle, jobResponsibility, dateStarted, dateEnded}) {
     return (
-        <div className="experience">
+        <div id = {id} className="experience">
             <div>{companyName}</div>
             <div>{positionTitle}</div>
             <div>{jobResponsibility}</div>
@@ -17,6 +17,7 @@ ExperienceDiv.propTypes = {
     jobResponsibility: PropTypes.string,
     dateStarted: PropTypes.string,
     dateEnded: PropTypes.string,
+    id: PropTypes.number,
 }
 
 export default ExperienceDiv;
