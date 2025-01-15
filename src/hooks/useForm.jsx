@@ -25,7 +25,7 @@ function PersonalForm() {
 
 
 function useForm(initialValues) {
-    const [inputs, setInputs] = useState({initialValues});
+    const [inputs, setInputs] = useState(initialValues);
 
     const handleChange = (e) => {
         const {name, value} = e.target;

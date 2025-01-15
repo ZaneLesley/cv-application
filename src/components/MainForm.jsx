@@ -10,8 +10,8 @@ import PersonalButton from "./PersonalButton.jsx";
 
 function MainForm() {
     const [experiences, setExperiences] = useState([]);
-    const [education, setEducation] = useState(null);
-    const [personal, setPersonal] = useState(null);
+    const [education, setEducation] = useState({});
+    const [personal, setPersonal] = useState({});
 
     const [activeSection, setActiveSection] = useState("education");
 
